@@ -16,17 +16,29 @@
         </h1>
     </header>
     <div id='characterSelector'>
-        <span class='character' id="character1">
-            <img src='assets/images/riven.jpg' alt='riven'>
+        <span class='imageContainer character' data-hp='150' data-attack='10' data-counterAttack='35' alt='riven'>
+            <img src='assets/images/riven.jpg'>
+            <span class='HP' id='character1'>
+                Riven HP:150
+            </span>
         </span>
-        <span class='character' id="character2">
+        <span class='imageContainer character'  data-hp='175' data-attack='10' data-counterAttack='25'>
             <img src='assets/images/lissandra.jpg' alt='lissandra'>
+            <span class='HP' id="character2">
+                Lissandra HP:175
+            </span>
         </span>
-        <span class='character' id="character3">
+        <span class='imageContainer character' data-hp='200' data-attack='8' data-counterAttack='10'>
             <img src='assets/images/nasus.jpg' alt='nasus'>
+            <span class='HP' id="character3">
+                Nasus HP:200
+            </span>
         </span>
-        <span class='character' id="character4">
+        <span class='imageContainer character' data-hp='100' data-attack='20' data-counterAttack='15'>
             <img src='assets/images/varus.jpg' alt='varus'>
+            <span class='HP' id="character4">
+                Varus HP:100
+            </span>
         </span>
     </div>
     <div id='chosenCharacter'>
@@ -40,10 +52,7 @@
         </h2>
     </div>
     <div id="fightSection">
-        <h2>
-            Fight Section
-        </h2>
-        <button>
+        <button id='attackButton'>
             Attack
         </button>
     </div>
@@ -52,6 +61,9 @@
             Defender
         </h2>
     </div>
+    <aside>
+
+    </aside>
     <footer>
 
     </footer>
