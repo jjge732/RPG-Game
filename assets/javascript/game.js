@@ -2,6 +2,7 @@ let characterAttack = 0;
 let characterHP = 0;
 let defenderHP = 0;
 let defenderCounterAttack = 0;
+let attack;
 
 $('body').on('click', '.character', function() {
     $('.character').off('click');
@@ -23,6 +24,9 @@ $('body').on('click', '.possibleEnemy', function() {
     $('#defender').append(this);
     defenderHP = parseInt($('#opponent').attr('data-hp'));
     $('.enemy').removeClass('possibleEnemy');
+    attack = $("<button id='attackButton'>");
+    $('#fightSection').append(attack);
+    attack.html('Attack');
 })
 
 $('body').on('click', '#attackButton', function() {
@@ -37,6 +41,7 @@ $('body').on('click', '#attackButton', function() {
         }
         else {
             $('#opponent').remove();
+            attack.remove();
             $('.enemy').attr('class', 'imageContainer possibleEnemy enemy');
             $('yourCharacter').data('hp', characterHP);
             $('aside').html(`You attacked for ${characterAttack} damage and defeated your opponent!`)
