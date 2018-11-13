@@ -62,13 +62,13 @@ $('body').on('click', '#attackButton', function() {
         $('aside').html(`You attacked for ${characterAttack} damage! <br> You were attacked for ${defenderCounterAttack} damage!`)
     }
     else {
-        //removes opponent if they are not healthy enough to continue
-        $('#opponent').remove();
         //removes attack button
         attack.remove();
         //adds classes back to other fighters not yet fought
         $('.enemy').attr('class', 'imageContainer possibleEnemy enemy');
-        $('aside').html(`You attacked for ${characterAttack} damage and defeated your opponent!`)
+        $('aside').html(`You attacked for ${characterAttack} damage and defeated ${$('#opponent .HP').attr('data-name')}!`);
+        //removes opponent if they are not healthy enough to continue
+        $('#opponent').remove();
     }
     //chceks if the user is able to keep attacking
     if (characterHP <= 0) {
