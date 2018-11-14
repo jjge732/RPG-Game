@@ -5,11 +5,6 @@ let defenderHP = 0;
 let defenderCounterAttack = 0;
 let attack;
 
-//allows use on small screen
-// if(window.matchMedia('(max-width: 730px)').matches) {
-    
-// }
-// else {
     //dynamically adds on click function to character class
     $('body').on('click', '.character', function() {
         //turns off click functionality
@@ -44,8 +39,13 @@ let attack;
         $('.enemy').removeClass('possibleEnemy');
         //creates attack button and sets attack variable to this creation
         attack = $("<button id='attackButton'>");
-        //adds button to div with id fight section
-        $('#fightSection').append(attack);
+        //adds button to div with id fight 
+        if (window.matchMedia('(max-width: 730px)').matches) {
+            $('#defender').append(attack);
+        }
+        else {
+            $('#fightSection').append(attack);
+        }
         //sets text of attack button to attack
         attack.html('Attack');
     })
@@ -87,4 +87,3 @@ let attack;
         $('#yourCharacter .HP').html($('#yourCharacter .HP').attr('data-name') + ': ' +characterHP);
         $('#opponent .HP').html($('#opponent .HP').attr('data-name') + ': ' + defenderHP);
     })
-//}

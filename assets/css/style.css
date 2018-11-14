@@ -115,9 +115,56 @@ div:not(#characterSelector, #fightSection) {
 }
 
 @media only screen and (max-width: 730px) {
-    h2 {
-        width: 572px;
-        text-align: center;
+    body {
+        min-height: 1500px;
     }
 
+    :not(span, img) {
+        width: 100%;
+        text-align: center;
+    }
+    
+    span, img {
+        width: 48%;
+        height: auto;
+        margin-top: 50px;
+        box-sizing: border-box;
+    }
+
+    .HP {
+        width: 98%;
+        box-sizing: border-box;
+    }
+    #attackButton {
+        top: 75%;
+        left: 50%;
+    }
+    body {
+        background-image: none;
+        background-color: #111;
+    }
+    h2 {
+        width: 94%;
+    }
+    aside {
+        height: 165px;
+    }
+}
+
+@media only screen and (max-height: 850px) {
+    #attackButton {
+        top: 60%;
+    }
+}
+
+@media only screen and (max-height: 700px) {
+    #attackButton {
+        top: 55%;
+    }
+}
+
+@media only screen and (max-height: 600px) {
+    #attackButton {
+        top: 50%;
+    }
 }
